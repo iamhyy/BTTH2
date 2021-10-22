@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <style >
+        table, td, th{
+            border: 1px solid black;
+            
+        }
+
+    </style>
+    <script>
+        function caculate1(){
+            var x = sl1.value;
+            var y = gia1.value;
+            tien1.innerHTML = x*y;
+        }function caculate2(){
+            var x = sl2.value;
+            var y = gia2.value;
+            tien2.innerHTML = x*y;
+        }
+    
+    </script> 
+    <script>
+        $(document).change(function(){
+            var x = $('.sl1').val()*Number($('.gia1').val());
+            var y =  $('.sl2').val()*Number($('.gia2').val());
+            r = x+y;
+            $('.tong').html(r);
+        });
+        
+        
+    
+    
+</script>
+</head>
+<body  bgcolor="#FFEDCA
+">
+    <form >
+        <table>
+            <tr>
+                <td width="250px">Sản phẩm</td>
+                <td>Số lượng</td>
+                <td width="120px">Đơn giá</td>
+                <td width="120px">Thành tiền</td>
+                <td width="120px">Chức năng</td>
+            </tr>
+            <tr>
+                <td>Iphone 11 Pro Mã 64GB</td>
+                <td><input type="number" name="sl1" class="sl1" id="sl1" onkeyup="caculate1()" ></input></td>
+                <td><input type="text" name="gia1" class="gia1" id="gia1" onkeyup="caculate1()"></input></td>
+                <td><span class="tien1"id="tien1"></span></td>
+                <td align="center"><input type="submit" style="border-radius: 10px;" id="submit" class="submit1" value="Xóa" onclick="deleted()"></td>
+            </tr>
+            <tr>
+                <td>Samsun
+                    g Galaxy Note 10+</td>
+                <td><input type="number" name="sl2" class="sl2" id="sl2" onkeyup="caculate2()"></input></td>
+                <td><input type="text" name="gia2" class="gia2" id="gia2" onkeyup="caculate2()"></input></td>
+                <td><span class="tien2" id="tien2" ></span></td>
+                <td align="center"><input type="submit" style="border-radius: 10px;" id="submit" class="submit2" value="Xóa" onclick="deleted()"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Tổng tiền</td>
+                <td colspan="2" class="tong"><span class="tong"id="tong">
+                    
+                </span></td>
+            </tr>
+            
+        </table>
+    </form>
+       
+</body>
+</html>

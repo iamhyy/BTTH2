@@ -1,0 +1,44 @@
+.contain-image{
+    top: 50%;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+   
+   
+}
+.image{
+    margin-left: 50px;
+    position: relative;
+    width: 100%;
+    left: 0px;
+    display: flex;
+
+}
+.contain-image .image img{
+    width: 20%;
+    height: auto;
+    float: left;
+    margin: 0 auto;
+    display:block;
+  
+}
+#next,#prev{
+    
+    position:absolute;
+    width: 4%;
+    top: 10%;
+    cursor: pointer;
+     
+    padding-right: 0px;
+}
+#next{
+    
+    right: 0px;
+    
+}
+#prev{
+    margin-left: 0px;
+    left: 0px;
+    padding-left: 0px;  
+}
+    

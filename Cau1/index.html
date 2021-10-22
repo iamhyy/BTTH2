@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    
+    <style >
+        table, td, th{
+            background-color:darksalmon;
+            border: 1px solid blue;
+            
+        }
+
+    </style>
+    <script>
+        function caculate(){
+            var x = luong.value;
+            var y = heso.value;
+            result.innerHTML = x*y;
+        }
+        
+    </script> 
+</head>
+<body  >
+    <form >
+        <table>
+            <tr>
+                <td width="100px">Lương</td>
+                <td width="300px"><input type="text" id="luong" name="luong"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>Hệ số lương</td>
+                <td><input type="number" style="border-radius: 10px;" name="heso" id="heso" min="1" max="10"></input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" style="border-radius: 10px;" id="submit" class="submit" value="Tính lương tháng" onclick="caculate()">
+                </td>
+            </tr>
+            <tr>
+                <td>Lương tháng</td>
+                <td><span id="result"></span></td>
+            </tr>
+        </table>
+    </form>
+       
+</body>
+</html>

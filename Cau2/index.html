@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <style>
+        table, th, td{
+            border: 1px solid green;
+            border-collapse: collapse;
+        }
+        .tbl{
+            background-color: rgb(138, 138, 230);
+            border: 1px solid green;
+        }
+
+    </style>
+    
+    
+    
+</head>
+<body bgcolor="#e6e600" >
+    <div class="table">
+    
+        <table>
+            <caption><h1>THỰC ĐƠN</h1></caption>
+            <tr>
+                <td width="100px">Thức ăn</td>
+                <td width="100px">Thức ăn</td>
+                <td width="200px">Thời điểm                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="food" id="food" size="7" multiple>
+                        <option value="20000">Bún bò</option>
+                        <option value="18000">Hủ tiếu</option>
+                        <option value="17000">Bánh canh</option>
+                        <option value="19000">Phở bò</option>
+                        <option value="15000">Nui</option>
+                        <option value="12000"> Bánh mì thịt</option>
+                        <option value="15000">Bánh cuốn</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select name="drink" id="drink" size="7" multiple>
+                        <option value="12000">Cà phê đá</option>
+                        <option value="15000">Cà phê sữa đá</option>
+                        <option value="13000">Chanh dây</option>
+                        <option value="12000">Chanh muối</option>
+                        <option value="14000">Xí muội</option>
+                        <option value="13000">Sữa tươi</option>
+                        <option value="17000">Cam vắt</option>
+
+                    </select>
+                </td>
+                
+                <td><input type="radio" name="ngay" value="1"> Ban ngày<br>
+                    <input type="radio" name="ngay" value="2">Ban đêm
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">
+                    <button style="border-radius: 10px;"class="submit" >Tính tiền</button>
+                </td>
+            </tr>
+            
+        </table>
+    
+    </div><br><br>
+    <div class="table-bill">
+        <table id="bill" class="tbl">
+            <tr>
+                <th style="width:200px">Các món đã dùng</th>
+                <th style="width:40%">Tiền</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    $(".submit").click(function () {
+        var day = $("input[name = ngay]:checked").val();
+        var food = $("#food option:selected"),
+            drink = $("#drink option:selected"),
+            table = $("#bill");
+
+        food.each(function (index) {
+            var str = "<tr><td>" + $(this).text() + "</td>";
+            var x = "<td>" + $(this).val() + "</td></tr>";
+            table.append(str+x);
+        });
+
+        drink.each(function () {
+            var str = "<tr><td>" + $(this).text() + "</td>";
+            var x = "<td>" + $(this).val() + "</td></tr>";
+            var r = str + x;
+            table.append(r);
+        });
+
+        var totalMoney = 0;
+        table.find("tr").each(function (index) {
+            if (index >= 1) {
+                totalMoney = totalMoney +Number($(this).find("td").eq(1).html());
+            }
+        });
+
+        if (day == 2) {
+            totalMoney = totalMoney + totalMoney * 0.1;
+        }
+        table.append("<tr><td>Tổng tiền</td>" + "<td>" + totalMoney + " đ</td></tr>");
+        table.show();
+    });
+    </script> 
+</html>

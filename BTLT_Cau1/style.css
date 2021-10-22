@@ -1,0 +1,152 @@
+body{
+    font-family: Roboto;
+    background: #373B44;
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+background: linear-gradient(to right, #4286f4, #373B44);
+
+}
+
+#caculator{
+    width:300px;
+    height:480px;
+    background-color: #eaedef;
+    top:20px;
+    margin:0 auto;
+    position:relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display{
+    height: 100px;
+    border: 1px  black;
+    border-radius: 10%;
+}
+
+.display-1{
+    text-align: left;
+    height:20px;
+    margin:0 20px;
+    padding-top:20px;
+    font-size:18px;
+    color:#373B44;
+}
+
+.display-2 {
+    text-align: right;
+    height:60px;
+    margin: 10px 20px;
+    font-size: 30px;
+    color: #373B44;
+}
+
+#keyboard{
+    height: 400px;
+}
+
+.operation, .last-clear,.all-clear,.equal , .number {
+    width:90px;
+    height:50px;
+    margin: 5px;
+    float:left;
+    border-radius: 15%;
+    border-width: 0;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.number, .trong{
+    background-color: #eaedef;
+}
+
+.operation,.last-clear,.all-clear,.equal ,.number{
+    cursor: pointer;
+}
+
+.operation:active, .last-clear:active, .all-clear:active, .equal:active .number:active {
+    font-size: 13px;
+}
+
+.operation:focus, .last-clear:focus, .all-clear:focus, .equal:focus .number:focus{
+    outline: 0;
+}
+
+button:nth-child(1) {
+    font-size: 20px;
+    background-color:crimson;
+}
+
+button:nth-child(2) {
+    font-size: 20px;
+    background-color: #ffa500;
+}
+
+button:nth-child(3) {
+    font-size: 20px;
+    background-color:mediumseagreen;
+}
+
+button:nth-child(4) {
+    font-size: 20px;
+    background-color:mediumseagreen;
+}
+button:nth-child(5) {
+    font-size: 20px;
+    background-color:mediumseagreen;
+}
+button:nth-child(6) {
+    font-size: 20px;
+    background-color:mediumseagreen;
+}
+button:nth-child(7) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(7) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(9) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(8) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(10) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(11) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(12) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(13) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(14) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(15) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(16) {
+    font-size: 20px;
+    background-color: #7d93e0;
+}
+button:nth-child(17) {
+    font-size: 20px;
+    background-color: #9477af;
+}
+button:nth-child(18) {
+    font-size: 20px;
+    background-color: #9477af;
+}

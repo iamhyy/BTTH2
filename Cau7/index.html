@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="submit.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <form action="#" class="form">
+        <table>
+            
+            <thead>
+                <tr>
+                    <th colspan="2">Đăng ký CV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th width=120px>Họ và tên</th>
+                    <td><input type="text" class="ten" placeholder="Nguyễn Văn C"></td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ</th>
+                    <td><input type="text" class="diachi" placeholder="TP.HCM"></td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại</th>
+                    <td><input type="text" class="sdt" placeholder="0900000000"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" class="email" placeholder="ex@gmail.com"></td>
+                </tr>
+                <tr>
+                    <th>Nghề nghiệp</th>
+                    <td><input type="text" class="nghe" placeholder="Designer"></td>
+                </tr>
+                <tr>
+                    <th>Ảnh đại diện</th>
+                    <td><input type="file" class="anh"></td>
+                </tr>
+
+                <tr>
+                    <th rowspan="2">Kỹ năng</th>
+                    <td class="nest" style="border-bottom:white">
+                        <table class="tablenest">
+                            <tr>
+                                <th>Tên kỹ năng</th>
+                                <td><input type="text" class="kynang" placeholder="Node JS"></td>
+                            </tr>
+                            <tr>
+                                <th>Mức độ</th>
+                                <td><input type="range" class="mucdo" min="0" max="100"></td>
+                            </tr>
+
+                        </table>
+
+                    </td>
+                </tr>
+                <tr style="border-top: none;">
+                    <td><a class="them" href="#">Thêm</a></td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td align="center" colspan="2"><input type="submit" value="Đăng ký" class="submit"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+    <div class="popup">
+        <div class="wrapanh">
+            <img class="ava" src="" alt="avatar">
+        </div>
+        <h1 class="popup-ten"></h1>
+        <div class="liet-ke">
+            <p class="popup-nghe"><span class="material-icons">work</span><span class="popup-nghe1">Sinh viên</span></p>
+            <p class="popup-diachi"><span class="material-icons">home</span><span class="popup-diachi1">Tp.HCM</span>
+            </p>
+            <p class="popup-email"><span class="material-icons">email</span><span
+                    class="popup-email1">123@gmail.com</span></p>
+            <p class="popup-sdt"><span class="material-icons">call</span><span class="popup-sdt">0123456789</span></p>
+        </div>
+
+        <hr>
+
+        <h2 class="h2kynang"><span class="material-icons">auto_awesome</span>Kỹ năng</h2>
+
+        <div class="progresswrap">
+            <div class="progress">
+                <p class="tenkynang">Node JS</p>
+                <progress class="thanhmucdo" max="100" value="50"></progress>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<head>
+    <script>
+        $(document).ready(function () {
+        x = 0;
+    
+        $('#next').click(function () {
+            
+            x = (x <= 80) ? (x + 20) : 0;
+            $('.image').css('left', -x + "%");
+       }); 
+    
+        $('#prev').click(function () {
+            x = (x >= 20) ? (x - 20) : 100;
+            $('.image').css('left', -x + "%");
+
+        });
+    setInterval(function(){
+        x = (x <= 80) ? (x + 20) : 0;
+        $('.image').css('left', -x + "%");
+    }, 4000);
+    
+});
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <div class="image">
+            <img src="Image/hinh1.jpg" >
+            <img src="Image/hinh2.jpg" >
+
+            <img src="Image/hinh3.jpg" >
+            <img src="Image/hinh4.jpg" >
+
+            <img src="Image/hinh5.jpg" >
+
+            <img src="Image/hinh6.jpg" >
+
+            <img src="Image/hinh7.jpg" >
+
+            <img src="Image/hinh8.jpg" >            
+        </div>
+
+    </div>
+   
+    <img src="Image/next.png" id="next">
+    <img src="Image/prev.jpg" id="prev">
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+body{
+    width: 100%;
+    height: auto;
+}
+table{
+    border-collapse: collapse;
+    border: black 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+table
+
+th,td,tr{
+    border-collapse: collapse;
+    border: black 1px solid;
+    padding: 5px;
+    
+}
+input text{
+    width: 60%;
+}
+
+
+
+tbody th{
+    text-align: left;
+}
+.popup {
+    position: absolute;
+    /*top: 0;*/
+    display: block;
+    width: 30%;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px;
+    margin-left: 35%;
+    padding: 10px;
+    height: auto;
+}
+.lietke {
+    display: table;
+   
+}
+
+.material-icons {
+    margin-right: 15px;
+    vertical-align: middle;           
+}
+
+.lietke p {
+   display: table-cell;
+   
+}
+.ava{
+    width: 60%;
+    height: auto;
+    display: block;
+  margin-left: 20%;
+  
+}
+progress{
+    display: block;
+    width: 100%;
+}
+.material-icon{
+    color: rgba(0,151,136,255)
+    ;
+}
+.tenkynang{
+    display: block;
+}
+

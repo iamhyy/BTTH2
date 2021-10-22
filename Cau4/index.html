@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <head>
+        <style >
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                
+
+            }
+            .td{
+                border: none;
+            }
+            
+        </style>
+        <script>
+            $(document).ready(function () {
+                    $('.submit').submit(function (e) {
+                        $('.thongtin').hide();
+                        e.preventDefault();
+                        var date = new Date($('.ngaychieu').val());
+                        day = date.getDate();
+                        month = date.getMonth() + 1;
+                        year = date.getFullYear();
+                        phim = $('.phim').val();
+                        suat_chieu = $('.suat_chieu').val();
+                        phong = $('.phong').val();
+                        ghe = $('.ghe').val();
+                        heso=1.0;
+                        gia=0;
+                        tong=0;
+                        $('.ngay_chieu_hd').html(day + "/" + month + "/" + year);
+                        $('.phim_hd').html(phim)
+                        $('.suat_chieu_hd').html(suat_chieu)
+                        $('.phong_hd').html(phong)
+                        if((suat_chieu=='9h-12h')||(suat_chieu=='13h-16h')) 
+                            gia=45000;
+                        else if(suat_chieu=='17h-20h') 
+                            gia=55000;
+                        else 
+                            gia=35000;
+                        if(phong=='Đồng') 
+                            heso=1.0;
+                        else if(phong=='Bạc') 
+                            heso=1.2;
+                        else if(phong=='Vàng') 
+                            heso=1.5;
+                        else 
+                            heso=2.0;
+                    
+                        for (var i = 0; i < ghe.length; i++) {
+                            str = '<tr><td class="td">&emsp;&emsp;' + ghe[i] + '</td><td class="td">&emsp;&emsp;'+gia*heso+' đ</td></tr>';
+                            $('.gia').append(str)
+                            tong+=gia*heso;
+                        }
+                        $('.tong').html(tong+" đ")
+                $('.table').hide();
+                $('.thongtin').show();
+                    });
+
+});
+        </script>
+    </head>
+    <body>
+    <div class="table">
+        <form class="submit">
+        <table >
+            
+            <tr>
+                <td align="center" colspan="2">Mua vé</td>
+            </tr>
+            <tr>
+                <td>Ngày chiếu</td>
+                <td><input style="width: 360px;" type="date" class="ngaychieu" placeholder="dd/mm/yyyy" style="width:200px"></td>
+            </tr>
+            <tr>
+                <td>Phim</td>
+                <td>
+                    <select class="phim" name="" id="" style="width:200px" >
+                        <option disabled selected hidden>Phim</option>
+                        <option value="Yêu em bất chấp"> Yêu em bất chấp</option>
+                        <option value="Tháng năm rực rỡ">Tháng năm rực rỡ</option>
+                        <option value="Và em sẽ đến">Và em sẽ đến</option>
+                        <option value="Chuyện ma lúc 3 giờ sáng">Chuyện ma lúc 3 giờ sáng</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Suất chiếu</td>
+                <td>
+                    <select class="suat_chieu" style="width:200px">
+                        <option disabled selected hidden>Suất chiếu</option>
+                        <option value="9h-12h">9h-12h</option>
+                        <option value="13h-16h">13h-16h</option>
+                        <option value="17h-20h">17h-20h</option>
+                        <option value="22h-2h">22h-2h</option>
+                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phòng chiếu</td>
+                <td>
+                    <select class="phong" style="width:200px">
+                        <option disabled selected hidden>Phòng chiếu</option>
+                        <option value="Đồng">Đồng</option>
+                        <option value="Bạc">Bac</option>
+                        <option value="Vàng">Vàng</option>
+                        <option value="Kim cương">Kim cương</option>
+                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn chỗ ngồi</td>
+                <td>
+                    <select class="ghe" size="4" multiple style="width:200px">
+                        <option value="1">Ghế 01</option>
+                        <option value="2">Ghế 02</option>
+                        <option value="3">Ghế 03</option>
+                        <option value="4">Ghế 04</option>
+                        <option value="5">Ghế 05</option>
+                        <option value="6">Ghế 06</option>
+                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input  type="submit" value="Mua vé"></td>
+            </tr>
+        </table>
+        </form>
+    </div> <br>
+    <div class="thongtin">
+        <table  > 
+            <tr>
+                <td class="td" colspan="2" align="center"> Thông tin vé</td>
+            </tr>
+
+            <tr>
+                <td class="td" width=120px >Khách hàng</td>
+                <td class="td" width=200px>Nguyễn Văn A</td>
+            </tr>
+            <tr>
+                <td class="td" >Ngày chiếu</td>
+                <td class="ngay_chieu_hd td"></td>
+            </tr>
+            <tr>
+                <td class="td" >Phim</td>
+                <td class="phim_hd td"></td>
+            </tr>
+            <tr>
+                <td class="td" >Suất chiếu</td>
+                <td class="suat_chieu_hd td"></td>
+            </tr>
+            <tr>
+                <td class="td" >Phòng chiếu</td>
+                <td class="phong_hd td"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <table class="gia td" style="border: hidden">
+                        <tr>
+                            <td class="td"><h4>&emsp;&emsp;Ghế &ensp;&ensp;</h4></td>
+                            <td class="td"><h4>&emsp;&emsp;Giá vé</h4></h4></td>
+                        </tr>
+                    </table>
+                    <table class="td" style="border: hidden">
+                        <tr>
+                            <td class="td"><h4>&emsp;&emsp;Tổng tiền&emsp;</h4></td>
+                            <td class="td "><h4 class="tong"></h4></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </body>
+    
+    
+</html>
